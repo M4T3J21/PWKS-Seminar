@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <title>Semoinarski</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="CodeHim">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/foundation/5.0.2/css/foundation.css'>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/demo.css">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</head>
+<header id="nav-wrapper">
+  <nav id="nav">
+    <div class="nav left">
+      <span class="gradient skew"><h1 class="logo un-skew"><a href="#home">Logo Here</a></h1></span>
+      <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+    </div>
+    <div class="nav right">
+      <a href="#home" class="nav-link active"><span class="nav-link-span"><span class="u-nav">Home</span></span></a>
+      <a href="#about" class="nav-link"><span class="nav-link-span"><span class="u-nav">About</span></span></a>
+      <a href="#work" class="nav-link"><span class="nav-link-span"><span class="u-nav">Work</span></span></a>
+      <a href="#contact" class="nav-link"><span class="nav-link-span"><span class="u-nav">Contact</span></span></a>
+    </div>
+  </nav>
+</header>
+<body>
+<div class="medium-12 columns">
+  
+</div>
+<div class="medium-4  columns">
+  <div class="cart">
+      <h3>Košarica</h3>
+      <div class="row">
+          <div class="medium-6 columns">
+              <button class="tiny secondary" id="clear">Očistite košaricu</button>
+          </div>
+          <div class="medium-6 columns">
+              <button class="tiny disabled" title="Nismo bas toliko napravili">Plaćanje</button>
+          </div>
+      </div>
+      <div id="cartItems">Učitavamo Vaš artikl...</div>
+      Ukupna cijena: <strong id="totalPrice">0 Kn</strong>
+  </div>
+
+</div>
+<div class="medium-12 columns">
+  <h1>Ponuda</h1>
+  <div class="products">
+      <div class="product medium-4 columns" data-name="KupaceGaceHrv" data-price="280" data-id="0">
+          <img src="./img/KupaceGaceHrv.png" alt="KupaceGaceHrvatska" />
+          <h3>Kupaće gaće Hrvatska</h3>
+          <h4>280 Kn</h4>
+          <input type="text" class="count" value="1" />
+          <button class="tiny">Dodaj u košaricu</button>
+      </div>
+      <div class="product medium-4 columns" data-name="KupaceGaceJmj" data-price="280" data-id="1">
+          <img src="./img/KupaceGaceJmj.jpg" alt="KupaceGaceJmj" />
+          <h3>Kupaće gaće Jamaicaa</h3>
+          <h4>280 Kn</h4>
+          <input type="text" class="count" value="1" />
+          <button class="tiny">Dodaj u košaricu</button>
+      </div>
+      <div class="product medium-4 columns" data-name="KupaceGaceVb" data-price="280" data-id="2">
+          <img src="./img/KupaceGaceVb.jpg"alt="KupaceGaceVb" />
+          <h3>Kupaće gaće Brazil (National)</h3>
+          <h4>280 Kn</h4>
+          <input type="text" class="count" value="1" />
+          <button class="tiny">Dodaj u košaricu</button>
+      </div>
+      <div class="medium-12 columns"></div>
+          <div class="product medium-4 columns" data-name="KupaciKostim2" data-price="260" data-id="3">
+              <img src="./img/KupaciKostim2.jpg" alt="KupaciKostim2" />
+              <h3>Kupaći kostim Turbo Classic</h3>
+              <h4>260 Kn</h4>
+              <input type="text" class="count" value="1" />
+              <button class="tiny">Dodaj u košaricu</button>
+          </div>
+          <div class="product medium-4 columns" data-name="KupaciKostim1" data-price="260" data-id="4">
+              <img src="./img/KupaciKostim1.jpg"alt="KupaciKostim1" />
+              <h3>Kupaći kostim TurboBall</h3>
+              <h4>260 Kn</h4>
+              <input type="text" class="count" value="1" />
+              <button class="tiny">Dodaj u košaricu</button>
+          </div>
+          <div class="product medium-4 columns" data-name="KupaciKostim3" data-price="260" data-id="5">
+              <img src="./img/KupaciKostim3.jpg"alt="KupaciKostim3" />
+              <h3>Kupaći kostim Spiral Green</h3>
+              <h4>260 Kn</h4>
+              <input type="text" class="count" value="1" />
+              <button class="tiny">Dodaj u košaricu</button>
+              <br>
+          </div>
+      </div>
+  </div>
+</div>
+<script type="text/template" id="cartT">
+<% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3>  <span class="label">
+<%= item.count %> komad<% if(item.count > 1)
+{%>s
+<%}%> za <%= item.total %> Kn</span > </div>
+<% }); %>
+</script>
+
+<div class="jumbotron text-center" style="margin-bottom:2px">
+  <p> 
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item1">
+      </li>
+  </p>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
+
+
+<div class="footer-basic">
+  <footer>
+      <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+      <p class="copyright">M&M © 2022</p>
+  </footer>
+
+<script  src="./js/script.js"></script>
+</body>
+</html>
